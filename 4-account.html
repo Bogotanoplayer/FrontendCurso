@@ -58,16 +58,7 @@
     }
     .title{
         font-size: var(--lg);
-        margin-bottom: 1.5em;
-        text-align: center;
-    }
-    .subtitle {
-        color: var(--very-light-pink);
-        font-size: var(--md);
-        font-weight: 300;
-        margin-top: 0;
-        margin-bottom: 3em;
-        text-align: center;
+        margin-bottom: 2em;
     }
     .label{
         font-size: var(--sm);
@@ -78,12 +69,12 @@
         background-color: var(--text-input-field);
         border: none;
         border-radius: 0.4em;
-        height: 1.5em;
+        height: 2em;
         font-size: var(--md);
         padding: 0,2em;
-        margin-bottom: 1.4em;
+        margin-bottom: 3em;
     }
-    .confirm-button{
+    .create-button{
         background-color: var(--hospital-green);
         border-radius: 0.6em;
         border: none;
@@ -98,29 +89,35 @@
     @media (max-width: 640px){
         .logo{
             display: block;
-    }
+        }
     .form-container{
         width: 30em;
+        }
+    .create-button{
+            position: absolute;
+            width: 18.75em;
+            bottom: 2.5em;
         }
     }
 </style>
 <body>
     <div class="login">
         <div class="form-container">
-            <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
-
-            <h1 class="title">Create a new password</h1>
-            <p class="subtitle">Enter a new password for your account</p>
+            <h1 class="title">My account</h1>
 
             <form action="/" class="form">
-                <label for="password" class="label">New Password</label>
+
+                <label for="name" class="label">Name</label>
+                <input type="text" id="name" placeholder="Katie" class="input input-name">
+
+                <label for="email" class="label">Email address</label>
+                <input type="email" id="email" placeholder="example@email.com" class="input input-email">
+
+                <label for="password" class="label">Password</label>
                 <input type="password" id="password" placeholder="*********" class="input input-password">
 
-                <label for="new-password" class="label">Confirm Password</label>
-                <input type="password" id="new-password" placeholder="*********" class="input input-password">
-
                 <input type="submit"
-                value="Confirm" class="confirm-button">
+                value="Create" class="create-button">
             </form>
         </div>
     </div>

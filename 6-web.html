@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --sm:1.4em;
+    --md:1.6em;
+    --lg:2em;
+    }
+    body{
+        font-family: 'Quicksand', sans-serif;
+    }
+    html {
+        font-size: 62.5%;
+    }
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    .cards-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 24em);
+        gap: 2em;
+        place-content: center;
+    }
+    .product-cards{
+        width: 24em;
+    }
+    .product-cards img{
+        width: 24em;
+        height: 24em;
+        border-radius: 2em;
+        object-fit: cover;
+    }
+    .product-cards figure img{
+        width: 3em;
+        height: 3em;
+    }
+    .product-cards figure img{
+        width: 3em;
+        height: 3em;
+    }
+    .product-info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .product-info div p:nth-child(1){
+        font-weight: bold;
+        font-size: var(--md); 
+    }
+    .product-info div p:nth-child(2){
+        font-size: var(--sm);
+        color: var(--very-light-pink);
+    }
+    @media (max-width: 640px){
+        .cards-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 14em);
+            gap: 2em;
+    }
+        .product-cards{
+            width: 14em;
+    }
+        .product-cards img{
+            width: 14em;
+            height: 14em;
+            border-radius: 2em;
+            object-fit: cover;
+    }
+}
+</style>
+<body>
+    <section class="main-container">
+        <div class="cards-container">
+            <div class="product-cards">
+                <img src="https://i.postimg.cc/jj5MrymS/miata.jpg" alt="car">
+                <div class="product-info">
+                    <div>
+                        <p>$5,000</p>
+                        <p>Miata</p>
+                    </div>
+                
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="addC">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-cards">
+                <img src="https://i.postimg.cc/jj5MrymS/miata.jpg" alt="car">
+                <div class="product-info">
+                    <div>
+                        <p>$5,000</p>
+                        <p>Miata</p>
+                    </div>
+                
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="addC">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-cards">
+                <img src="https://i.postimg.cc/jj5MrymS/miata.jpg" alt="car">
+                <div class="product-info">
+                    <div>
+                        <p>$5,000</p>
+                        <p>Miata</p>
+                    </div>
+                
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="addC">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-cards">
+                <img src="https://i.postimg.cc/jj5MrymS/miata.jpg" alt="car">
+                <div class="product-info">
+                    <div>
+                        <p>$5,000</p>
+                        <p>Miata</p>
+                    </div>
+                
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="addC">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-cards">
+                <img src="https://i.postimg.cc/jj5MrymS/miata.jpg" alt="car">
+                <div class="product-info">
+                    <div>
+                        <p>$5,000</p>
+                        <p>Miata</p>
+                    </div>
+                
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="addC">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-cards">
+                <img src="https://i.postimg.cc/jj5MrymS/miata.jpg" alt="car">
+                <div class="product-info">
+                    <div>
+                        <p>$5,000</p>
+                        <p>Miata</p>
+                    </div>
+                
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="addC">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-cards">
+                <img src="https://i.postimg.cc/jj5MrymS/miata.jpg" alt="car">
+                <div class="product-info">
+                    <div>
+                        <p>$5,000</p>
+                        <p>Miata</p>
+                    </div>
+                
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="addC">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-cards">
+                <img src="https://i.postimg.cc/jj5MrymS/miata.jpg" alt="car">
+                <div class="product-info">
+                    <div>
+                        <p>$5,000</p>
+                        <p>Miata</p>
+                    </div>
+                
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="addC">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-cards">
+                <img src="https://i.postimg.cc/jj5MrymS/miata.jpg" alt="car">
+                <div class="product-info">
+                    <div>
+                        <p>$5,000</p>
+                        <p>Miata</p>
+                    </div>
+                
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="addC">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-cards">
+                <img src="https://i.postimg.cc/jj5MrymS/miata.jpg" alt="car">
+                <div class="product-info">
+                    <div>
+                        <p>$5,000</p>
+                        <p>Miata</p>
+                    </div>
+                
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="addC">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-cards">
+                <img src="https://i.postimg.cc/jj5MrymS/miata.jpg" alt="car">
+                <div class="product-info">
+                    <div>
+                        <p>$5,000</p>
+                        <p>Miata</p>
+                    </div>
+                
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="addC">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-cards">
+                <img src="https://i.postimg.cc/jj5MrymS/miata.jpg" alt="car">
+                <div class="product-info">
+                    <div>
+                        <p>$5,000</p>
+                        <p>Miata</p>
+                    </div>
+                
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="addC">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-cards">
+                <img src="https://i.postimg.cc/jj5MrymS/miata.jpg" alt="car">
+                <div class="product-info">
+                    <div>
+                        <p>$5,000</p>
+                        <p>Miata</p>
+                    </div>
+                
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="addC">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-cards">
+                <img src="https://i.postimg.cc/jj5MrymS/miata.jpg" alt="car">
+                <div class="product-info">
+                    <div>
+                        <p>$5,000</p>
+                        <p>Miata</p>
+                    </div>
+                
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="addC">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-cards">
+                <img src="https://i.postimg.cc/jj5MrymS/miata.jpg" alt="car">
+                <div class="product-info">
+                    <div>
+                        <p>$5,000</p>
+                        <p>Miata</p>
+                    </div>
+                
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="addC">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

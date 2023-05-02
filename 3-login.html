@@ -44,30 +44,25 @@
         display: flex;
         flex-direction: column;
     }
+    .form a{
+        color: var(--hospital-green);
+        font-size: small;
+        text-align: center;
+        text-decoration: none;
+        margin-top: 2em;
+        margin-bottom: 4.5em;
+    }
     .form-container{
         display: grid;
         grid-template-rows: auto 1fr auto;
         width: 40em;
     }
     .logo{
-        width: 15em;
+        width: 20em;
         margin-bottom: 2em;
         justify-self: center;
         display: none;
-
-    }
-    .title{
-        font-size: var(--lg);
-        margin-bottom: 1.5em;
-        text-align: center;
-    }
-    .subtitle {
-        color: var(--very-light-pink);
-        font-size: var(--md);
-        font-weight: 300;
-        margin-top: 0;
-        margin-bottom: 3em;
-        text-align: center;
+        height: 12em;
     }
     .label{
         font-size: var(--sm);
@@ -78,12 +73,12 @@
         background-color: var(--text-input-field);
         border: none;
         border-radius: 0.4em;
-        height: 1.5em;
+        height: 2em;
         font-size: var(--md);
-        padding: 0,2em;
+        padding: 0,4em;
         margin-bottom: 1.4em;
     }
-    .confirm-button{
+    .login-button{
         background-color: var(--hospital-green);
         border-radius: 0.6em;
         border: none;
@@ -95,11 +90,28 @@
         cursor: pointer;
         height: 3em;
     }
+    .signup-button{
+        background-color: var(--white);
+        border-radius: 0.6em;
+        color: var(--hospital-green);
+        padding: 0.3em;
+        font-size: var(--md);
+        width: 100%;
+        font-weight: bold;
+        cursor: pointer;
+        height: 3em;
+        border: 0.1em solid var(--hospital-green);
+    }
     @media (max-width: 640px){
         .logo{
             display: block;
-    }
-    .form-container{
+        }
+        .signup-button{
+            position: absolute;
+            width: 18.75em;
+            bottom: 2.5em;
+        }
+        .form-container{
         width: 30em;
         }
     }
@@ -108,19 +120,18 @@
     <div class="login">
         <div class="form-container">
             <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+                <form action="/" class="form">
+                <label for="email" class="label">Email address</label>
+                <input type="email" id="email" placeholder="example@email.com" class="input input-email">
 
-            <h1 class="title">Create a new password</h1>
-            <p class="subtitle">Enter a new password for your account</p>
-
-            <form action="/" class="form">
-                <label for="password" class="label">New Password</label>
-                <input type="password" id="password" placeholder="*********" class="input input-password">
-
-                <label for="new-password" class="label">Confirm Password</label>
+                <label for="new-password" class="label">Password</label>
                 <input type="password" id="new-password" placeholder="*********" class="input input-password">
 
                 <input type="submit"
-                value="Confirm" class="confirm-button">
+                value="Log in" class="login-button">
+
+                <a href="/">Forgot my password</a>
+                <button class="signup-button">Sign up</button>
             </form>
         </div>
     </div>

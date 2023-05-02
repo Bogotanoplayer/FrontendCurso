@@ -54,73 +54,66 @@
         margin-bottom: 2em;
         justify-self: center;
         display: none;
-
     }
     .title{
         font-size: var(--lg);
-        margin-bottom: 1.5em;
-        text-align: center;
-    }
-    .subtitle {
-        color: var(--very-light-pink);
-        font-size: var(--md);
-        font-weight: 300;
-        margin-top: 0;
-        margin-bottom: 3em;
-        text-align: center;
+        margin-bottom: 2em;
     }
     .label{
         font-size: var(--sm);
         font-weight: bold;
         margin-bottom: 0.3em;
     }
-    .input{
-        background-color: var(--text-input-field);
-        border: none;
-        border-radius: 0.4em;
-        height: 1.5em;
+    .value{
+        color: var(--very-light-pink);
         font-size: var(--md);
-        padding: 0,2em;
-        margin-bottom: 1.4em;
+        margin-top: 0.5em;
+        margin-bottom: 3em;
     }
-    .confirm-button{
-        background-color: var(--hospital-green);
+    .edit-button{
+        background-color: var(--white);
         border-radius: 0.6em;
-        border: none;
-        color: var(--white);
+        color: var(--hospital-green);
         padding: 0.3em;
         font-size: var(--md);
         width: 100%;
         font-weight: bold;
         cursor: pointer;
         height: 3em;
+        border: 0.1em solid var(--hospital-green);
     }
     @media (max-width: 640px){
         .logo{
             display: block;
-    }
+        }
     .form-container{
         width: 30em;
+        }
+    .edit-button{
+            position: absolute;
+            width: 18.75em;
+            bottom: 2.5em;
         }
     }
 </style>
 <body>
     <div class="login">
         <div class="form-container">
-            <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
-
-            <h1 class="title">Create a new password</h1>
-            <p class="subtitle">Enter a new password for your account</p>
+            <h1 class="title">My account</h1>
 
             <form action="/" class="form">
-                <label for="password" class="label">New Password</label>
-                <input type="password" id="password" placeholder="*********" class="input input-password">
 
-                <label for="new-password" class="label">Confirm Password</label>
-                <input type="password" id="new-password" placeholder="*********" class="input input-password">
+                <label for="name" class="label">Name</label>
+                <p class="value">Maicol Cacas</p>
+
+                <label for="email" class="label">Email address</label>
+                <p class="value">shit@gmail.com</p>
+
+                <label for="password" class="label">Password</label>
+                <p class="value">********</p>
 
                 <input type="submit"
-                value="Confirm" class="confirm-button">
+                value="Edit" class="edit-button">
             </form>
         </div>
     </div>
