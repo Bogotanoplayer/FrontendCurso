@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+     :root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --sm:1.4em;
+    --md:1.6em;
+    --lg:2em;
+    }
+    body{
+        font-family: 'Quicksand', sans-serif;
+    }
+    html {
+        font-size: 62.5%;
+    }
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    .mobile-menu{
+        padding: 2.4em;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .mobile-menu a {
+        text-decoration: none;
+        color: var(--black);
+        font-size: var(--md);
+    }
+    .mobile-menu ul{
+        list-style: none;
+    }
+    .mobile-menu ul:nth-child(1){
+        margin-bottom:2.5em;
+    }
+    .mobile-menu ul:nth-child(2){
+        border-top:  0.1em solid var(--very-light-pink);
+        margin-top: 1em;
+    }
+    .mobile-menu ul li{
+        margin: 24px 0 0;
+    }
+    .email{
+        font-size: var(--sm);
+        font-weight: 300;
+    }
+    .sign-out{
+        color: var(--hospital-green) !important;
+        font-size: var(--sm);
+    }
+    .mobile-menu ul:nth-child(3){
+        margin-top: 25em;
+        
+    }
+    @media (max-width: 389px){
+        .mobile-menu ul:nth-child(3){
+        margin-top: 10em;
+        }
+    }
+</style>
+<body>
+    <div class="mobile-menu">
+        <ul>
+            <li>
+                <a href="/">CATEGORIES</a>
+            </li>
+            <li>
+                <a href="/">ALL</a>
+            </li>
+            <li>
+                <a href="/">CLOTHES</a>
+            </li>
+            <li>
+                <a href="/">ELECTRONICS</a>
+            </li>
+            <li>
+                <a href="/">FURNITURE</a>
+            </li>
+            <li>
+                <a href="/">TOYS</a>
+            </li>
+            <li>
+                <a href="/">OTHER</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="/">My orders</a>
+            </li>
+            <li>
+                <a href="/">My account</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="/" class="email">shit@gmail.com</a>
+            </li>
+            <li>
+                <a href="/" class="sign-out">Sign out</a>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>

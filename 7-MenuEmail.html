@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=di, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    :root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --sm:1.4em;
+    --md:1.6em;
+    --lg:2em;
+    }
+    body{
+        font-family: 'Quicksand', sans-serif;
+    }
+    html {
+        font-size: 62.5%;
+    }
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    .desktop-menu{
+        width: 14em;
+        height: auto;
+        border: 0.1em solid var(--very-light-pink);
+        border-radius: 0.6em;
+        padding: 2em 2em 0 2em;
+    }
+    .desktop-menu ul{
+        list-style: none;
+    }
+    .desktop-menu ul li{
+        text-align: end;
+    }
+    .desktop-menu ul li:nth-child(1),
+    .desktop-menu ul li:nth-child(2){
+        font-weight: bolder;
+    }
+    .desktop-menu ul li:last-child{
+       padding-top: 0.5em;
+       border-top: 0.1em solid var(--very-light-pink);
+       margin-top: 1em;
+       margin-bottom: 1.5em;
+    }
+    .desktop-menu ul li:last-child a{
+        color: var(--hospital-green);
+        font-size: var(--sm);
+    }
+    .desktop-menu ul li a{
+        color: var(--black);
+        text-decoration: none;
+        margin-top: 0.5em;
+        display: inline-block;
+        font-size: var(--md);
+    }
+</style>
+<body>
+    <div class="desktop-menu">
+        <ul>
+            <li>
+                <a href="/" class="title">My orders</a>
+            </li>
+            <li>
+                <a href="/">My account</a>
+            </li>
+            <li>
+                <a href="/">Sign out</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
