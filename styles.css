@@ -1,3 +1,4 @@
+/* General */
 :root{
     --white: #FFFFFF;
     --black: #000000;
@@ -22,15 +23,13 @@
     .inactive{
         display: none;
     }
+/* navBar*/
     nav{
         display: flex;
         justify-content: space-between;
         border-bottom: 0.1em solid var(--very-light-pink);
         width: 100%;
         padding: 0 4.5em;
-    }
-    .menu{
-        display: none;
     }
     .logo{
         width: 12em;
@@ -87,6 +86,7 @@
         right: 1.6em;
         
     }
+    /* mini menu desktop */
     .menu-email{
         background-color: var(--white);
         position: absolute;
@@ -125,8 +125,46 @@
         display: inline-block;
         font-size: var(--md);
     }
+    /*menu mobile */
+    .burguerMenu{
+        display: none;
+    }
+    .mobile-menu{
+        position: absolute;
+        top: 7em;
+        font-weight: bold; 
+    }
+    .mobile-menu a {
+        text-decoration: none;
+        color: var(--black);
+        font-size: var(--md);
+        background-color: var(--white);
+    }
+    .mobile-menu ul{
+        list-style: none;
+    }
+    .mobile-menu ul:nth-child(2){
+        border-top:  0.1em solid var(--very-light-pink);
+        margin-top: 2em;
+    }
+    .mobile-menu ul li{
+        margin: 2.4em 0 0;
+    }
+    .email{
+        font-size: var(--sm);
+        font-weight: 300;
+    }
+    .sign-out{
+        color: var(--hospital-green) !important;
+        font-size: var(--sm);
+    }
+    .mobile-menu ul:nth-child(3){
+        margin-top: 2em;
+        
+    }
+    /* media querys */
     @media(max-width :640px){
-        .menu{
+        .burguerMenu{
             display: block;
         }
         .nav-left ul{
@@ -141,9 +179,15 @@
         .logo{
             margin-left: 3.5em;
         }
+        .menu-email{
+            display: none;
+    }
 }
 @media(min-width :840px){
     .nav-cart div {
         display: block;
+    }
+    .mobile-menu{
+        display: none;
     }
 }
