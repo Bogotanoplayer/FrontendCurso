@@ -162,6 +162,81 @@
         margin-top: 2em;
         
     }
+    /* Carrito compras */
+    .product-detail{
+        width: 36em;
+        position: absolute;
+        right: 0;
+        top: 3em;
+        padding: 2em;
+    }
+    .add-button{
+        background-color: var(--hospital-green);
+        border-radius: 0.6em;
+        border: none;
+        color: var(--white);
+        padding: 0.3em;
+        font-size: var(--md);
+        width: 100%;
+        font-weight: bold;
+        cursor: pointer;
+        height: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .title{
+        font-size: var(--lg);
+        margin-bottom: 1.8em;
+        font-weight: bold;
+        margin-left: 1em;
+        margin-top: 1.7em;
+    }
+    .title-container{
+        display: flex;
+    }
+    .title-container img{
+       transform: rotate(180deg); 
+    }
+    .order{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2em 0 2em;
+        background-color: var(--text-input-field);
+        margin-bottom: 2em;
+        border-radius: 1em;
+        font-size: var(--sm);
+        font-weight: bold;
+        height: 4em;
+        border: 0.1em solid var(--hospital-green)
+    }
+    .order p:nth-child(1){
+        display: flex;
+        flex-direction: column;
+        gap: 0.2em;
+    }
+    .shop-cart{
+        display: flex;
+        justify-content: space-between;
+        gap: 1em ;
+        margin-bottom: 2em ;
+        align-items: center;
+    }
+    .shop-cart figure img{
+        width: 10em;
+        height: 7em;
+        border-radius: 2em;
+        border: 0.1em solid var(--hospital-green);
+    }
+    .shop-cart p:nth-child(2){
+        color: var(--very-light-pink);
+        font-size: var(--md);
+    }
+    .shop-cart p:nth-child(3){
+        font-size: var(--md);
+        font-weight: bold;
+    }
     /* media querys */
     @media(max-width :640px){
         .burguerMenu{
@@ -181,6 +256,9 @@
         }
         .menu-email{
             display: none;
+    }
+        .product-detail{
+        width: 100%;
     }
 }
 @media(min-width :840px){
