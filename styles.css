@@ -23,7 +23,9 @@
     .inactive{
         display: none;
     }
+
 /* navBar*/
+
     nav{
         display: flex;
         justify-content: space-between;
@@ -86,7 +88,9 @@
         right: 1.6em;
         
     }
+
     /* mini menu desktop */
+
     .menu-email{
         background-color: var(--white);
         position: absolute;
@@ -125,14 +129,21 @@
         display: inline-block;
         font-size: var(--md);
     }
+
     /*menu mobile */
+
     .burguerMenu{
         display: none;
     }
     .mobile-menu{
         position: absolute;
         top: 7em;
+        left: 0em;
         font-weight: bold; 
+        background-color: var(--white);
+        border: solid 0.1em var(--very-light-pink);
+        border-radius: 0.5em;
+        padding: 1em;
     }
     .mobile-menu a {
         text-decoration: none;
@@ -162,13 +173,18 @@
         margin-top: 2em;
         
     }
+
     /* Carrito compras */
+
     .product-detail{
         width: 36em;
         position: absolute;
         right: 0;
-        top: 3em;
+        top: 7em;
         padding: 2em;
+        background-color: var(--white);
+        border: solid 0.1em var(--very-light-pink);
+        border-radius: 1em;
     }
     .add-button{
         background-color: var(--hospital-green);
@@ -237,7 +253,49 @@
         font-size: var(--md);
         font-weight: bold;
     }
+
+    /*productos web*/
+
+    .cards-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 24em);
+        gap: 2em;
+        place-content: center;
+        margin-top: 2em;
+    }
+    .product-cards{
+        width: 24em;
+    }
+    .product-cards img{
+        width: 24em;
+        height: 24em;
+        border-radius: 2em;
+        object-fit:fill;
+    }
+    .product-cards figure img{
+        width: 3em;
+        height: 3em;
+    }
+    .product-cards figure img{
+        width: 3em;
+        height: 3em;
+    }
+    .product-info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .product-info div p:nth-child(1){
+        font-weight: bold;
+        font-size: var(--md); 
+    }
+    .product-info div p:nth-child(2){
+        font-size: var(--sm);
+        color: var(--very-light-pink);
+    }
+
     /* media querys */
+
     @media(max-width :640px){
         .burguerMenu{
             display: block;
@@ -258,10 +316,24 @@
             display: none;
     }
         .product-detail{
-        width: 100%;
+            width: 100%;
+    }
+    .cards-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 14em);
+        gap: 2em;
+    }
+    .product-cards{
+        width: 14em;
+    }
+    .product-cards img{
+        width: 14em;
+        height: 14em;
+        border-radius: 2em;
+        object-fit: cover;
     }
 }
-@media(min-width :840px){
+    @media(min-width :840px){
     .nav-cart div {
         display: block;
     }
