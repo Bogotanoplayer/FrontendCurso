@@ -5,7 +5,7 @@ const burguerMenu = document.querySelector('.burguerMenu');
 const mobileMenu = document.querySelector('.mobile-menu');
 
 const carrritoIcon = document.querySelector('.nav-cart');
-const menuCarrito = document.querySelector('.product-detail')
+const menuCarrito = document.querySelector('#shopping-cart-menu')
 
 const cardsContainer = document.querySelector('.cards-container')
 
@@ -97,7 +97,7 @@ function renderProducts(array){//una funcion para crear productos a base de un a
         
     
         const infoPrice = document.createElement('p');
-        infoPrice.innerText = '$' + product.price // aca usando innerText agrego con cocatenacion la propiedade del array price
+        infoPrice.innerText = '$' + product.price // aca usando innerText agrego con concatenacion la propiedad del array price
         
     
         const infoName = document.createElement('p');
