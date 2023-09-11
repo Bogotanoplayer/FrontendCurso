@@ -101,6 +101,9 @@
         border: 0.1em solid var(--very-light-pink);
         border-radius: 0.6em;
         padding: 2em 2em 0 2em;
+        -webkit-box-shadow: 10px 10px 40px -3px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 40px -3px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 40px -3px rgba(0,0,0,0.75);
     }
     .menu-email ul{
         list-style: none;
@@ -184,7 +187,10 @@
         padding: 2em;
         background-color: var(--white);
         border: solid 0.1em var(--very-light-pink);
-        border-radius: 1em;
+        border-radius: 2em;
+        -webkit-box-shadow: 10px 10px 40px -3px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 40px -3px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 40px -3px rgba(0,0,0,0.75);
     }
     .add-button{
         background-color: var(--hospital-green);

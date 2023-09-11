@@ -5,48 +5,57 @@ const burguerMenu = document.querySelector('.burguerMenu');
 const mobileMenu = document.querySelector('.mobile-menu');
 
 const carrritoIcon = document.querySelector('.nav-cart');
-const menuCarrito = document.querySelector('#shopping-cart-menu')
+const menuCarrito = document.querySelector('#shopping-cart-menu');
+const flechaCarrito = document.querySelector('.flecha-carrito');
 
-const cardsContainer = document.querySelector('.cards-container')
+const cardsContainer = document.querySelector('.cards-container');
+
+const productDetail = document.querySelector('#product-detail');
+const productDetailClose = document.querySelector('#product-detail-close');
 
 navEmail.addEventListener('click', toggleMenuEmail)//el addevent es cuando haga click(evento) , se ejecuta algo(funcion)
-burguerMenu.addEventListener('click', toggleMobileMenu)
-carrritoIcon.addEventListener('click', toggleMenuCarrito)
+burguerMenu.addEventListener('click', toggleMobileMenu);
+carrritoIcon.addEventListener('click', toggleMenuCarrito);
+flechaCarrito.addEventListener('click', toggleMenuCarrito)
+productDetailClose.addEventListener('click', closeProductDetail)
 
 function toggleMenuEmail(){
     
+    const productDetailClosed = productDetail.classList.contains('inactive')
     const menuCarritoClosed = menuCarrito.classList.contains('inactive')//si esta cerrado el carrito es porque tiene inactive, lo mismo con la de email y mobile
 
     if(!menuCarritoClosed){
         menuCarrito.classList.add('inactive')//si el menu carrito no esta cerrado , pone la clase inactive y lo cierra para abrir el email y asi con los otros
     }
 
+    if(!productDetailClosed){// el signo de exclamacionn es not, mobile
+        productDetail.classList.add('inactive')
+    }
+
     menuEmail.classList.toggle('inactive')
 }
 
 function toggleMobileMenu(){
-
-    const menuCarritoClosed = menuCarrito.classList.contains('inactive')
-
-    if(!menuCarritoClosed){
-        menuCarrito.classList.add('inactive')
-    }
-
+    menuCarrito.classList.add('inactive')//se puuede hacer lo mismo sin el if
+    productDetail.classList.add('inactive')
     mobileMenu.classList.toggle('inactive')
 }
 function toggleMenuCarrito(){
-
-    const mobileMenuClosed = mobileMenu.classList.contains('inactive')
-    const menuEmailClosed = menuEmail.classList.contains('inactive')//aca toca cerrar ambos por el email en el desktop
-
-    if(!mobileMenuClosed){// el signo de exclamacionn es not, mobile
-        mobileMenu.classList.add('inactive')
-    }
-    if(!menuEmailClosed){//desktop
-        menuEmail.classList.add('inactive')
-    }
-
+    mobileMenu.classList.add('inactive')
+    menuEmail.classList.add('inactive')
+    productDetail.classList.add('inactive')
     menuCarrito.classList.toggle('inactive')
+}
+
+function openProductDetail(){
+    menuCarrito.classList.add('inactive')
+    menuEmail.classList.add('inactive')
+    mobileMenu.classList.add('inactive')
+    productDetail.classList.remove('inactive')
+}
+
+function closeProductDetail(){
+    productDetail.classList.add('inactive')
 }
 
 const productList = [];// creo un array para crear los productos y no hardcodear html y escalable
@@ -88,7 +97,8 @@ function renderProducts(array){//una funcion para crear productos a base de un a
     
         const img = document.createElement('img');
         img.setAttribute('src', product.image);// aca usnado el setAttribute pongo el src de la imagen usando la propiedad del array image
-    
+        img.addEventListener('click', openProductDetail);
+
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-info');
        
